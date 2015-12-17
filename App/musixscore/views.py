@@ -6,7 +6,6 @@ def browse(request):
 	genre = request.GET.get('genre', '')
 	performer = request.GET.get('performer', '')
 	cd = request.GET.get('cd','')
-	songs = []
 
 	if request.method == 'POST':
 		songs = request.POST.getlist('songs[]')
@@ -16,12 +15,17 @@ def browse(request):
 	cd_list = []
 	songs_list = []
 
-	if not performer == '':
+	if not genre == '':
 		performer_list = Performer.objects.all().filter(genre=genre)
+
+	if not genre == '' and not performer == '':
+		 cd_list = CD.objects.all().filter(performer=performer)
+
+	if not genre == '' and not performer == '' and not cd == '':
+		songs_list = Song.objects.all().filter(cd=cd)
 
 	if not cd == '':
 		cd_list = CD.objects.all().filter(performer=performer)
-
 
 	return render(request, 'browse/browse.html', {
 		'genre_list': genre_list,
