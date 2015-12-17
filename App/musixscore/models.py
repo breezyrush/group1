@@ -1,4 +1,6 @@
 from django.db import models
+from django.utils import timezone
+import datetime
 
 # Create your models here.
 class Genre(models.Model):
@@ -30,3 +32,10 @@ class Song(models.Model):
 
 	def __unicode__(self):
 		return self.title
+
+class Cart(models.Model):
+	song = models.ForeignKey(Song)
+	date = models.DateTimeField(default=timezone.now)
+
+	def __unicode__(self):
+		return self.song

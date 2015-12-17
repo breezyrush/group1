@@ -5,9 +5,9 @@
 {% block content %}
 <h1>xMusixscore.com</h1>
 
-<p>{% if genre %}Genre: {{genre}}{% endif %}</p>
-	<p>{% if peformer %}Peformer: {{peformer}}{% endif %}</p>
-	<p>{% if cd %}CD: {{cd}}{% endif %}</p>
+<p>{% if genre %}Genre: {{genre}}{% endif %}<br>
+{% if performer %}performer: {{performer}}{% endif %}<br>
+{% if cd %}CD: {{cd}}{% endif %}</p>
 
 <form method="GET" action="/browse">
 	<label>Genre</label>
@@ -46,6 +46,9 @@
 		{% endfor %}
 	</select>
 	<br>
+</form>
+<form method="POST" action="">
+	{% csrf_token%}
 	<label>Songs</label>
 	<select multiple name="songs">
 		<option value="">-</option>
@@ -56,19 +59,17 @@
 	<br>
 	<input type="submit" value="Add to Cart">
 </form>
-
-
-
+<a href="{% url 'clear' %}">Clear Cart?</a>
 
 <table>
 	<tr>
 		<td>SONGS IN CART</td>
 	</tr>
+	{% for songs in cart %}
 	<tr>
-		{% for songs in cart %}
-		<td>{{songs}}</td>
-		{% endfor %}
+		<td>{{songs.song}}</td>
 	</tr>
+	{% endfor %}
 </table>
 
 {% endblock %}
