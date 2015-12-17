@@ -14,16 +14,6 @@ class CDAdmin(admin.ModelAdmin):
 	pass
 admin.site.register(CD)
 
-<<<<<<< HEAD
 class SongAdmin(admin.ModelAdmin):
 	pass
 admin.site.register(Song)
-=======
-<<<<<<< HEAD
-
-=======
-class SongAdmin(admin.ModelAdmin):
-	pass
-admin.site.register(Song)
->>>>>>> 0ed92d4c94a19a5398b6027d820e2d17a3c980f4
->>>>>>> 3ac4ec76c28327ee5b670bcf40fd1a051266fbe0
