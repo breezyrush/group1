@@ -27,6 +27,6 @@ class CD(models.Model):
 	title = models.CharField(max_length = 100, null = True)
 	performer = models.ForeignKey(Performer)
 	# songs = models.ForeignKey(Song)
-
+	
 	def __unicode__(self):
 		return self.title
