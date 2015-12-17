@@ -8,33 +8,52 @@
 <form method="GET" action="/browse">
 	<select name="genre" onchange="this.form.submit()">
 		<option value="">-</option>
-		<option value="2">Genre2</option>
+		{% for g in genre_list %}
+		<option value="{{g.id}}">{{g}}</option>
+		{% endfor %}
 	</select>
 </form>
 
-<form method="GET">
+<form method="GET" action="/browse">
 	<select name="performer"  onchange="this.form.submit()">
 		<option value="">-</option>
-		<option>Performers</option>
+		{% for p in performer_list %}
+		<option value="{{p.id}}">{{p}}</option>
+		{% endfor %}
 	</select>
 </form>
 
-<form method="GET">
+<form method="GET"  action="/browse">
 	<select name="cd"  onchange="this.form.submit()">
 		<option value="">-</option>
-		<option>CD</option>
+		{% for c in cd_list %}
+		<option value="{{c.id}}">{{c}}</option>
+		{% endfor %}
 	</select>
 </form>
 
-<form method="POST">
+<form method="POST" action="/browse">
 	<select multiple name="songs">
 		<option value="">-</option>
-		<option value="1">Songs</option>
-		<option value="2">Songs</option>
-		<option value="33">Songs</option>
-		<option value="4">Songs</option>
+		{% for s in songs_list %}
+		<option value="{{s.id}}">{{s}}</option>
+		{% endfor %}
 	</select>
 	<input type="submit" value="Add to Cart">
 </form>
+
+
+
+
+<table>
+	<tr>
+		<td>SONGS IN CART</td>
+	</tr>
+	<tr>
+		{% for songs in cart %}
+		<td>{{songs}}</td>
+		{% endfor %}
+	</tr>
+</table>
 
 {% endblock %}
