@@ -13,6 +13,7 @@ class Performer(models.Model):
 	lname = models.CharField(max_length = 50, null = True)
 	gender =  models.CharField(max_length = 50, null = True)
 	age = models.PositiveIntegerField(default = 0)	
+	genre = models.ForeignKey(Genre)
 
 	def __unicode__(self):
 		return self.fname
