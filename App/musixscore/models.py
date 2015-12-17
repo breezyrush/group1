@@ -25,13 +25,6 @@ class Song(models.Model):
 
 	def __unicode__(self):
 		return self.title
-<<<<<<< HEAD
-=======
-
-class Song(models.Model):
-	title =  models.CharField(max_length = 50, null = True)
-
->>>>>>> 19bac82f909f5f1b1b9b3a6770c74156f23bcd78
 
 class CD(models.Model):
 	title = models.CharField(max_length = 100, null = True)
