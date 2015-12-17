@@ -5,40 +5,55 @@
 {% block content %}
 <h1>xMusixscore.com</h1>
 
+<p>{% if genre %}Genre: {{genre}}{% endif %}</p>
+	<p>{% if peformer %}Peformer: {{peformer}}{% endif %}</p>
+	<p>{% if cd %}CD: {{cd}}{% endif %}</p>
+
 <form method="GET" action="/browse">
+	<label>Genre</label>
 	<select name="genre" onchange="this.form.submit()">
+		{% if genre %}
+			<option value="{{genre}}" selected="true">{{genre}}</option>
+		{% else %}
 		<option value="">-</option>
-		{% for g in genre_list %}
+		{% endif %}
+		{% for g in genre_list%}
 		<option value="{{g.id}}">{{g}}</option>
 		{% endfor %}
 	</select>
-</form>
-
-<form method="GET" action="/browse">
+	<br>
+	<label>Performer</label>
 	<select name="performer"  onchange="this.form.submit()">
+		{% if performer %}
+			<option value="{{performer}}" selected="true">{{performer}}</option>
+		{% else %}
 		<option value="">-</option>
+		{% endif %}
 		{% for p in performer_list %}
 		<option value="{{p.id}}">{{p}}</option>
 		{% endfor %}
 	</select>
-</form>
-
-<form method="GET"  action="/browse">
+	<br>
+	<label>CD</label>
 	<select name="cd"  onchange="this.form.submit()">
+		{% if cd %}
+			<option value="{{cd}}" selected="true">{{cd}}</option>
+		{% else %}
 		<option value="">-</option>
+		{% endif %}
 		{% for c in cd_list %}
 		<option value="{{c.id}}">{{c}}</option>
 		{% endfor %}
 	</select>
-</form>
-
-<form method="POST" action="/browse">
+	<br>
+	<label>Songs</label>
 	<select multiple name="songs">
 		<option value="">-</option>
 		{% for s in songs_list %}
 		<option value="{{s.id}}">{{s}}</option>
 		{% endfor %}
 	</select>
+	<br>
 	<input type="submit" value="Add to Cart">
 </form>
 

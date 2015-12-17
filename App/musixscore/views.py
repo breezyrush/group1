@@ -1,7 +1,6 @@
 from django.shortcuts import render
 from .models import *
 
-
 def browse(request):
 	genre = request.GET.get('genre', '')
 	performer = request.GET.get('performer', '')
@@ -11,6 +10,7 @@ def browse(request):
 		songs = request.POST.getlist('songs[]')
 
 	genre_list = Genre.objects.all()
+
 	performer_list = []
 	cd_list = []
 	songs_list = []
@@ -32,4 +32,8 @@ def browse(request):
 		'performer_list' : performer_list,
 		'cd_list': cd_list, 
 		'songs': songs_list,
+
+		'genre' : genre,
+		'performer' : performer,
+		'cd': cd,
 	})
