@@ -9,3 +9,6 @@ class Performer(models.Model):
 
 	def __unicode__(self):
 		return self.name
+
+class Song(models.Model):
+	title =  models.CharField(max_length = 50, null = True)
