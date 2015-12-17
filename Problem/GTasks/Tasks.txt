@@ -1,0 +1,14 @@
+TASKING
+1. Page and Form 					Roselle
+2. URLs 							Roselle
+3. views							Roselle
+4. Models
+	genre							Josiah
+	performers 						Loreinne
+	CD 								Catherine
+	songs							Erikka
+5. admin
+	genre							Josiah
+	performers 						Loreinne
+	CD 								Catherine
+	songs							Erikka			

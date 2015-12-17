@@ -18,14 +18,22 @@ class Performer(models.Model):
 	def __unicode__(self):
 		return self.fname
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 0ed92d4c94a19a5398b6027d820e2d17a3c980f4
 class Song(models.Model):
 	title =  models.CharField(max_length = 50, null = True)
+	genre = models.ForeignKey('Genre')
+	performer = models.ForeignKey('Performer')
 
 	def __unicode__(self):
 		return self.title
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0ed92d4c94a19a5398b6027d820e2d17a3c980f4
 
 class CD(models.Model):
 	title = models.CharField(max_length = 100, null = True)
@@ -34,4 +42,7 @@ class CD(models.Model):
 	
 	def __unicode__(self):
 		return self.title
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0ed92d4c94a19a5398b6027d820e2d17a3c980f4
