@@ -19,6 +19,8 @@ class Performer(models.Model):
 
 class Song(models.Model):
 	title =  models.CharField(max_length = 50, null = True)
+	genre = models.ForeignKey('Genre')
+	performer = models.ForeignKey('Performer')
 
 	def __unicode__(self):
 		return self.title
