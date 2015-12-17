@@ -15,7 +15,7 @@ class Performer(models.Model):
 	age = models.PositiveIntegerField(default = 0)	
 
 	def __unicode__(self):
-		return self.name
+		return self.fname
 
 <<<<<<< HEAD
 class Song(models.Model):
