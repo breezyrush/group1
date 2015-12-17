@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+<h1>xMusixscore.com</h1>
+
+<form method="GET" action="/browse">
+	<select name="genre" onchange="this.form.submit()">
+		<option>Genre</option>
+	</select>
+</form>
+
+<form method="GET">
+	<select name="performers"  onchange="this.form.submit()">
+		<option>Performers</option>
+	</select>
+</form>
+
+<form method="GET">
+	<select name="cd"  onchange="this.form.submit()">
+		<option>CD</option>
+	</select>
+</form>
+
+<form method="GET">
+	<select name="songs"  onchange="this.form.submit()">
+		<option>Songs</option>
+	</select>
+</form>
+
+{% endblock %}

@@ -25,7 +25,7 @@ SECRET_KEY = 'a^v(m(5s-8x$)ci$g!uw=+do=4l*73sa%c1ln+-#wi7d6j008='
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*',]
 
 
 # Application definition
@@ -37,6 +37,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'musixscore',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -67,6 +68,12 @@ TEMPLATES = [
         },
     },
 ]
+
+STATICFILES_FINDERS = (
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    'django.contrib.staticfiles.finders.DefaultStorageFinder',
+)
 
 WSGI_APPLICATION = 'App.wsgi.application'
 
@@ -100,3 +107,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = BASE_DIR + '/static/'
+MEDIA_ROOT = BASE_DIR + '/media/'
+ADMIN_MEDIA_PREFIX = '/media/'
+MEDIA_URL = '/media/'
