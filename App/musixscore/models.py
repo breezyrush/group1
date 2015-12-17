@@ -13,6 +13,7 @@ class Performer(models.Model):
 	lname = models.CharField(max_length = 50, null = True)
 	gender =  models.CharField(max_length = 50, null = True)
 	age = models.PositiveIntegerField(default = 0)	
+	genre = models.ForeignKey(Genre)
 
 	def __unicode__(self):
 		return self.fname
@@ -21,6 +22,18 @@ class Performer(models.Model):
 class Song(models.Model):
 	title =  models.CharField(max_length = 50, null = True)
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+	def __unicode__(self):
+		return self.title
+=======
+=======
+class Song(models.Model):
+	title =  models.CharField(max_length = 50, null = True)
+>>>>>>> c7a0cd3c92aa2a427f8feb60c3763719472c73d5
+>>>>>>> cdfcefeaa4e9d5d360fb936e34272fb164a8fc07
+>>>>>>> 567c3e4096d68ea6eedfad8cd5fa3e1ca06f53e7
 
 class CD(models.Model):
 	title = models.CharField(max_length = 100, null = True)
