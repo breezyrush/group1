@@ -16,3 +16,12 @@ class Performer(models.Model):
 
 	def __unicode__(self):
 		return self.name
+
+
+class CD(models.Model):
+	title = models.CharField(max_length = 100, null = True)
+	# songs = models.ForeignKey(Song)
+
+	def __unicode__(self):
+		return self.title
+
