@@ -7,26 +7,34 @@
 
 <form method="GET" action="/browse">
 	<select name="genre" onchange="this.form.submit()">
-		<option>Genre</option>
+		<option value="">-</option>
+		<option value="2">Genre2</option>
 	</select>
 </form>
 
 <form method="GET">
-	<select name="performers"  onchange="this.form.submit()">
+	<select name="performer"  onchange="this.form.submit()">
+		<option value="">-</option>
 		<option>Performers</option>
 	</select>
 </form>
 
 <form method="GET">
 	<select name="cd"  onchange="this.form.submit()">
+		<option value="">-</option>
 		<option>CD</option>
 	</select>
 </form>
 
-<form method="GET">
-	<select name="songs"  onchange="this.form.submit()">
-		<option>Songs</option>
+<form method="POST">
+	<select multiple name="songs">
+		<option value="">-</option>
+		<option value="1">Songs</option>
+		<option value="2">Songs</option>
+		<option value="33">Songs</option>
+		<option value="4">Songs</option>
 	</select>
+	<input type="submit" value="Add to Cart">
 </form>
 
 {% endblock %}
