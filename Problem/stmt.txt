@@ -17,3 +17,36 @@ a folder named GTasks at the root of this repository.
 the Django codes.
 
 God Bless and Happy Christmas!
+
+
+
+DROPDOWN
+genre
+performer
+cd
+songs
+
+
+URLS
+genre 								submit
+genre/performer 					submit
+genre/performer/cd 
+genre/performer/cd/songs 
+
+TABLE
+songs w/ cart image
+
+TASKING
+1. Page and Form 					Roselle
+2. URLs 
+3. views
+4. models
+5. admin
+
+
+Features
+	get genre
+	get performer
+	get cd
+	get songs
+	add to cart
