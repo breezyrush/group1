@@ -47,11 +47,18 @@ songs w/ cart image
 
 TASKING
 1. Page and Form 					Roselle
-2. URLs 
-3. views
-4. models
+2. URLs 							Roselle
+3. views							Roselle
+4. Models
+	genre							Josiah
+	performers 						Loreinne
+	CD 								Catherine
+	songs							Erikka
 5. admin
-
+	genre							Josiah
+	performers 						Loreinne
+	CD 								Catherine
+	songs							Erikka							
 
 Features
 	get genre
@@ -59,4 +66,3 @@ Features
 	get cd
 	get songs
 	add to cart
->>>>>>> d1989efc6bd6d5df523d2ff608414c60efa21fec
