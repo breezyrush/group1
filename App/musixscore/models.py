@@ -17,15 +17,10 @@ class Performer(models.Model):
 	def __unicode__(self):
 		return self.fname
 
-<<<<<<< HEAD
 
 class Song(models.Model):
 	title =  models.CharField(max_length = 50, null = True)
 
-=======
-class Song(models.Model):
-	title =  models.CharField(max_length = 50, null = True)
->>>>>>> c7a0cd3c92aa2a427f8feb60c3763719472c73d5
 
 class CD(models.Model):
 	title = models.CharField(max_length = 100, null = True)
@@ -34,7 +29,4 @@ class CD(models.Model):
 	
 	def __unicode__(self):
 		return self.title
-<<<<<<< HEAD
 
-=======
->>>>>>> c7a0cd3c92aa2a427f8feb60c3763719472c73d5
