@@ -18,6 +18,15 @@ the Django codes.
 
 God Bless and Happy Christmas!
 
+<<<<<<< HEAD
+Models:
+	genre
+	performers
+	CDs
+	songs in CD
+
+	user
+=======
 
 
 DROPDOWN
@@ -50,3 +59,4 @@ Features
 	get cd
 	get songs
 	add to cart
+>>>>>>> d1989efc6bd6d5df523d2ff608414c60efa21fec
